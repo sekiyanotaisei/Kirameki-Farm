@@ -8,8 +8,12 @@ $(function () {
     arrows: false,                 // 前後の矢印を非表示
     appendDots: $('.price__gallery') // ドットナビゲーションをギャラリー部分に挿入
   });
-});
 
+  // aria-label のテキストを削除
+  $('.slick-dots button').each(function () {
+    $(this).removeAttr('aria-label');
+  });
+});
 
 $(".openbtn").click(function () {
   $(this).toggleClass("active");      // ボタンのアクティブ状態を切り替え
